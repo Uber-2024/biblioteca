@@ -1,0 +1,37 @@
+###
+GET http://localhost:8080/api/books
+
+###
+GET http://localhost:8080/api/books/4
+
+###
+POST http://localhost:8080/api/books
+Content-Type: application/json
+
+{
+  "title": "El Quijote de la Mancha",
+  "isbn": "789",    
+  "author": "Mighuel de Cervantes",  
+  "genre": "Novela",
+  "publishedDate": "2025-05-15", 
+  "status": "RESERVED"
+}   
+
+###
+PUT http://localhost:8080/api/books/4    
+Content-Type: application/json
+
+{
+  "title": "El Señor de los Anillos",
+  "isbn": "1234",  
+  "author": "j.R.R. Tolkien",
+  "publisher": "Editorial Tolkien",  
+  "genre": "Novela",
+  "publishedDate": "2025-05-23", 
+  "status": "AVAILABLE"
+}   
+###
+DELETE http://localhost:8080/api/books/1 
+
+###
+GET http://localhost:8080/api/books/buscar?title=anillos
